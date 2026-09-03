@@ -1,0 +1,33 @@
+Categories:
+  - Health & Fitness
+License: GPL-3.0-or-later
+AuthorName: z3itt
+AuthorEmail: info@z3itt.com
+WebSite: https://z3itt.com
+SourceCode: https://github.com/z3itt/FeelS
+IssueTracker: https://github.com/z3itt/FeelS/issues
+Changelog: https://github.com/z3itt/FeelS/releases
+
+AutoName: FeelS
+Summary: Local-first feelings wheel for private emotion check-ins.
+
+RepoType: git
+Repo: https://github.com/z3itt/FeelS
+
+Builds:
+  - versionName: 1.0.1
+    versionCode: 3
+    commit: v1.0.1
+    subdir: app
+    sudo:
+      - apt-get update
+      - apt-get install -y openjdk-17-jdk-headless
+      - update-alternatives -s java-1.17.0-openjdk-amd64
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags ^v[\d.]+$
+UpdateCheckData: app/build.gradle.kts|versionCode\s*=\s*(\d+)|.|versionName\s*=\s*"([^"]+)"
+CurrentVersion: 1.0.1
+CurrentVersionCode: 3

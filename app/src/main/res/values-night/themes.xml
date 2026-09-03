@@ -12,7 +12,7 @@
     <style name="Theme.FeelS.Splash" parent="Theme.SplashScreen">
         <item name="android:windowBackground">@color/splash_background</item>
         <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash_system_icon</item>
         <item name="windowSplashScreenIconBackgroundColor">@color/splash_icon_plate</item>
         <item name="postSplashScreenTheme">@style/Theme.FeelS</item>
     </style>

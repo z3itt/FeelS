@@ -3,6 +3,7 @@ package com.feels.ui.splash
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -38,16 +39,17 @@ fun AppSplashScreen(isDarkTheme: Boolean) {
     ) {
         Box(
             modifier = Modifier
-                .fillMaxWidth(0.46f)
-                .clip(RoundedCornerShape(percent = 32))
+                .fillMaxWidth(0.42f)
+                .aspectRatio(1f)
+                .clip(RoundedCornerShape(percent = 28))
                 .background(if (isDarkTheme) DarkSplashPlate else LightSplashPlate)
-                .padding(18.dp),
+                .padding(20.dp),
             contentAlignment = Alignment.Center,
         ) {
             Image(
                 painter = painterResource(wordmark),
                 contentDescription = "FeelS",
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth(0.88f),
                 contentScale = ContentScale.Fit,
             )
         }

@@ -8,7 +8,7 @@ log check-ins, and review patterns over time.
 | | |
 |---|---|
 | **Package** | `com.z3itt.feels` |
-| **Version** | `1.0.0` |
+| **Version** | `1.0.1` |
 | **Min SDK** | 26 (Android 8.0) |
 | **Target SDK** | 35 |
 | **License** | [GPL-3.0-or-later](LICENSE) |

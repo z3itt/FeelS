@@ -1,0 +1,1 @@
+Fix dark and light splash squircle: transparent wordmark assets, theme-specific system splash icon, and square launcher foreground for night mode.
