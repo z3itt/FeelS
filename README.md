@@ -152,11 +152,16 @@ FeelS does not upload data over the network.
 - Android SDK with API 35 platform tools
 - Device or emulator on API 26+
 
+### Install (release)
+
+Download the latest APK from
+[GitHub Releases](https://github.com/z3itt/FeelS/releases).
+
 ### Clone and run (debug)
 
 ```bash
-git clone https://github.com/z3itt/feels.git
-cd feels
+git clone https://github.com/z3itt/FeelS.git
+cd FeelS
 ```
 
 Open the project in Android Studio, set **Gradle JDK** to 17, sync, then Run.
@@ -174,23 +179,8 @@ export JAVA_HOME="$HOME/.jdks/temurin-17.0.20.1"   # or your JDK 17 path
 ./gradlew :core:domain:testDebugUnitTest :core:data:testDebugUnitTest
 ```
 
-### Release APK (signed)
-
-Signing uses environment variables (never commit the keystore):
-
-```bash
-export FEELS_STORE_FILE="$HOME/feels-release.jks"
-export FEELS_STORE_PASSWORD="your-store-password"
-export FEELS_KEY_ALIAS="feels"
-export FEELS_KEY_PASSWORD="your-key-password"
-
-./gradlew :app:assembleRelease
-```
-
-Output: `app/build/outputs/apk/release/app-release.apk`
-
-F-Droid builds from source and signs with the F-Droid key; your keystore is only
-needed for GitHub releases.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for signed release builds and distribution
+channels.
 
 ## Project layout
 
@@ -203,21 +193,10 @@ fastlane/metadata/    F-Droid / store listing text
 docs/screenshots/     README and store screenshots (add your images here)
 ```
 
-## Distribution
-
-| Channel | Notes |
-|---------|-------|
-| GitHub Releases | Signed APK from your keystore |
-| F-Droid | Build from source; metadata in fdroiddata |
-| Google Play | Not published by default |
-
-Store listing assets live under
-[`fastlane/metadata/android/en-US/`](fastlane/metadata/android/en-US/).
-
 ## Contributing
 
-FeelS is GPL-3.0. Contributions must be compatible with that license. Open an
-issue or pull request on GitHub.
+FeelS is GPL-3.0. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, signing,
+distribution, and pull request guidelines.
 
 ## Contact
 
