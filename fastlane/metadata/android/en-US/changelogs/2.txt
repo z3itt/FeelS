@@ -1,0 +1,1 @@
+FeelS 1.0.0: feelings wheel, encrypted local check-ins, history heatmap, home-screen widgets, breathing shortcut, JSON backup, and daily reminders. GPL-3.

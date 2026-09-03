@@ -1,0 +1,16 @@
+FeelS is a local-first Android app for naming how you feel. Spin a feelings wheel, log a check-in with intensity and an optional note, and review a 30-day heatmap plus weekly mood widgets.
+
+Your check-ins stay on the device in an encrypted database. FeelS does not send emotion data to a server.
+
+Features:
+• Feelings wheel with primary, secondary, and tertiary layers
+• Optional notes and intensity
+• History, heatmap, and home-screen widgets
+• Breathing shortcut and gentle grounding after high-distress logs
+• Daily reminders you can turn off or reschedule
+• JSON export and import so you can move logs to another phone
+
+FeelS is not medical care, diagnosis, or crisis support.
+
+License: GNU General Public License v3
+Source: https://github.com/z3itt

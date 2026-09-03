@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="110dp"
+    android:background="@color/splash_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/widget_preview_weekly_title"
+        android:textColor="@color/widget_preview_title"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:layout_marginTop="8dp"
+        android:baselineAligned="false"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="36dp" android:background="@drawable/widget_preview_bar_empty" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Mon" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="36dp" android:background="@drawable/widget_preview_bar_empty" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Tue" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="36dp" android:background="@drawable/widget_preview_bar_empty" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Wed" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="52dp" android:background="@drawable/widget_preview_bar_calm" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Thu" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="36dp" android:background="@drawable/widget_preview_bar_empty" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Fri" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="36dp" android:background="@drawable/widget_preview_bar_empty" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Sat" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+            <View android:layout_width="match_parent" android:layout_height="44dp" android:background="@drawable/widget_preview_bar_happy" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:paddingTop="4dp" android:text="Sun" android:textColor="@color/widget_preview_title" android:textSize="9sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

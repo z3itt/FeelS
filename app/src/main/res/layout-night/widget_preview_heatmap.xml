@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="110dp"
+    android:background="@color/splash_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/widget_preview_heatmap_title"
+        android:textColor="@color/widget_preview_title"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_happy" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+            <View android:layout_width="18dp" android:layout_height="14dp" android:layout_margin="2dp" android:background="@drawable/widget_preview_cell_empty_dark" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

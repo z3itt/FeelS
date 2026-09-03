@@ -1,0 +1,31 @@
+*.iml
+.gradle
+/.idea/
+.kotlin/
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+bin/
+gen/
+out/
+release/
+
+# Machine-specific SDK path. Keep gradle.properties and gradle/wrapper committed.
+local.properties
+
+# Module build dirs (app/build, core/*/build, ...)
+build/
+
+# Signing material. Never commit a release keystore or passwords.
+*.jks
+*.keystore
+keystore.properties
+secrets.properties
+feels-release.*
+

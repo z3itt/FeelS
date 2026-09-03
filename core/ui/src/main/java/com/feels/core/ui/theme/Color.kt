@@ -1,0 +1,45 @@
+package com.feels.core.ui.theme
+
+import androidx.compose.ui.graphics.Color
+
+val FeelSBackground = Color(0xFFFAFAF8)
+val FeelSSurface = Color(0xFFFFFFFF)
+val FeelSOnBackground = Color(0xFF2C2C2A)
+val FeelSOnSurfaceVariant = Color(0xFF6B6B68)
+val FeelSPrimary = Color(0xFF3D7A56)
+val FeelSOnPrimary = Color(0xFFFFFFFF)
+val FeelSPrimaryContainer = Color(0xFFD4EADB)
+val FeelSOnPrimaryContainer = Color(0xFF1B4332)
+val FeelSSecondary = Color(0xFF4A9B6E)
+val FeelSSecondaryContainer = Color(0xFFC5E6D0)
+val FeelSOnSecondaryContainer = Color(0xFF1E4D32)
+val FeelSTertiary = Color(0xFF5B9A72)
+val FeelSTertiaryContainer = Color(0xFFD8EDDF)
+val FeelSOnTertiaryContainer = Color(0xFF234D34)
+val FeelSOutline = Color(0xFFE8E8E4)
+
+val FeelSDarkBackground = Color(0xFF121212)
+val FeelSDarkSurface = Color(0xFF1E1E1E)
+val FeelSDarkOnBackground = Color(0xFFE8E8E4)
+val FeelSDarkOnSurfaceVariant = Color(0xFF9E9E9A)
+val FeelSDarkPrimary = Color(0xFF7BA892)
+val FeelSDarkOnPrimary = Color(0xFF0F2418)
+val FeelSDarkPrimaryContainer = Color(0xFF2A4D38)
+val FeelSDarkOnPrimaryContainer = Color(0xFFD4EADB)
+val FeelSDarkSecondary = Color(0xFF8EC5A8)
+val FeelSDarkSecondaryContainer = Color(0xFF234D34)
+val FeelSDarkOnSecondaryContainer = Color(0xFFC5E6D0)
+val FeelSDarkTertiary = Color(0xFF9BC4AA)
+val FeelSDarkTertiaryContainer = Color(0xFF2F5240)
+val FeelSDarkOnTertiaryContainer = Color(0xFFD8EDDF)
+val FeelSDarkOutline = Color(0xFF3A3A38)
+
+object EmotionColors {
+    val Bad = Color(0xFF7CB89A)
+    val Fearful = Color(0xFFF5C882)
+    val Angry = Color(0xFFE8929C)
+    val Disgusted = Color(0xFFB8B8B8)
+    val Sad = Color(0xFF7EB8D4)
+    val Happy = Color(0xFFF5D547)
+    val Surprised = Color(0xFFC49BD4)
+}
