@@ -1,5 +1,5 @@
 Categories:
-  - Health & Fitness
+  - Health Manager
 License: GPL-3.0-or-later
 AuthorName: z3itt
 AuthorEmail: info@z3itt.com
@@ -9,7 +9,7 @@ IssueTracker: https://github.com/z3itt/FeelS/issues
 Changelog: https://github.com/z3itt/FeelS/releases
 
 AutoName: FeelS
-Summary: Local-first feelings wheel for private emotion check-ins.
+Summary: Local first feelings wheel for private emotion check ins
 
 RepoType: git
 Repo: https://github.com/z3itt/FeelS
@@ -19,10 +19,6 @@ Builds:
     versionCode: 3
     commit: v1.0.1
     subdir: app
-    sudo:
-      - apt-get update
-      - apt-get install -y openjdk-17-jdk-headless
-      - update-alternatives -s java-1.17.0-openjdk-amd64
     gradle:
       - yes
 
