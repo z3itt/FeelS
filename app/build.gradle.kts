@@ -60,6 +60,14 @@ android {
     }
 }
 
+if (project.hasProperty("fdroid")) {
+    tasks.whenTaskAdded {
+        if (name.contains("ArtProfile")) {
+            enabled = false
+        }
+    }
+}
+
 dependencies {
     implementation(project(":core:ui"))
     implementation(project(":core:data"))
