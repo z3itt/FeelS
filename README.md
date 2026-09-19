@@ -8,7 +8,7 @@ log check-ins, and review patterns over time.
 | | |
 |---|---|
 | **Package** | `com.z3itt.feels` |
-| **Version** | `1.0.1` |
+| **Version** | `1.0.2` |
 | **Min SDK** | 26 (Android 8.0) |
 | **Target SDK** | 35 |
 | **License** | [GPL-3.0-or-later](LICENSE) |
@@ -154,8 +154,11 @@ FeelS does not upload data over the network.
 
 ### Install (release)
 
-Download the latest APK from
-[GitHub Releases](https://github.com/z3itt/FeelS/releases).
+Download **v1.0.2** from
+[GitHub Releases](https://github.com/z3itt/FeelS/releases/tag/v1.0.2).
+
+Signed release builds for F-Droid reproducibility use `./gradlew assembleRelease -Pfdroid=true`
+(see [CONTRIBUTING.md](CONTRIBUTING.md)).
 
 ### Clone and run (debug)
 
