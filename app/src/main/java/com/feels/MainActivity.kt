@@ -7,14 +7,17 @@ import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import android.graphics.Color as AndroidColor
 import androidx.core.content.ContextCompat
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -48,7 +51,6 @@ class MainActivity : ComponentActivity() {
         val initialDarkTheme = ThemeStartupStore.read(this)
         requestNotificationPermissionIfNeeded()
         handleDeepLink(intent)
-        enableEdgeToEdge()
         setContent {
             val themeViewModel: ThemeViewModel = hiltViewModel()
             val onboardingViewModel: OnboardingViewModel = hiltViewModel()
@@ -62,6 +64,9 @@ class MainActivity : ComponentActivity() {
             }
 
             FeelSTheme(darkTheme = darkThemePreference) {
+                SideEffect {
+                    applyEdgeToEdgeForTheme(darkThemePreference)
+                }
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background,
@@ -99,6 +104,19 @@ class MainActivity : ComponentActivity() {
                 pendingWheelNavigation.requestOpenBreathing()
             }
         }
+    }
+
+    private fun applyEdgeToEdgeForTheme(darkTheme: Boolean) {
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.auto(
+                AndroidColor.TRANSPARENT,
+                AndroidColor.TRANSPARENT,
+            ) { darkTheme },
+            navigationBarStyle = SystemBarStyle.auto(
+                AndroidColor.TRANSPARENT,
+                AndroidColor.TRANSPARENT,
+            ) { darkTheme },
+        )
     }
 
     private fun requestNotificationPermissionIfNeeded() {

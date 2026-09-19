@@ -68,7 +68,6 @@ fun EmotionWheelCanvas(
     val wheelBackground = MaterialTheme.colorScheme.surfaceVariant
     val hubColor = MaterialTheme.colorScheme.background
     val borderColor = MaterialTheme.colorScheme.onBackground
-    val labelColor = MaterialTheme.colorScheme.onBackground
     val transform = remember { WheelTransformStateHolder() }
     val rotationState = rememberWheelRotationState()
     val morphProgress = remember { Animatable(1f) }
@@ -226,7 +225,7 @@ fun EmotionWheelCanvas(
                     fontScale = fontScale,
                     wheelRotationDeg = rotationDeg,
                     alpha = morph,
-                    labelColor = labelColor,
+                    labelColor = readableLabelOnSegment(fillColor),
                 )
             }
         }
@@ -492,4 +491,13 @@ private fun buildWheelDescription(tier: EmotionTier, visibleCount: Int): String 
 private fun parseHexColor(hex: String): Color {
     val cleaned = hex.removePrefix("#")
     return Color(0xFF000000L or cleaned.toLong(16))
+}
+
+/** Dark or light label ink chosen from segment fill, not theme alone (pastels stay fixed in dark mode). */
+private fun readableLabelOnSegment(segmentFill: Color): Color {
+    val r = segmentFill.red
+    val g = segmentFill.green
+    val b = segmentFill.blue
+    val luminance = 0.2126f * r + 0.7152f * g + 0.0722f * b
+    return if (luminance > 0.62f) Color(0xFF1C1C1E) else Color(0xFFF5F5F7)
 }
