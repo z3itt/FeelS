@@ -5,6 +5,8 @@ log check-ins, and review patterns over time.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.z3itt.feels/)
+
 | | |
 |---|---|
 | **Package** | `com.z3itt.feels` |
