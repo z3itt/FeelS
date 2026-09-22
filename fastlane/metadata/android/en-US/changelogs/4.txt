@@ -1,0 +1,1 @@
+Readable feelings wheel labels in dark mode, system bar styling that follows the app theme, and clearer open source wording in the terms of service.

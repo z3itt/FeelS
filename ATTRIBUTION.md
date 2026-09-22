@@ -19,7 +19,7 @@ Dependency versions match `gradle/libs.versions.toml` at release time.
 | [AndroidX Room](https://developer.android.com/jetpack/androidx) | 2.6.1 | Apache-2.0 | Local database layer |
 | [AndroidX SQLite KTX](https://developer.android.com/jetpack/androidx) | 2.4.0 | Apache-2.0 | SQLite helpers |
 | [AndroidX Security Crypto](https://developer.android.com/jetpack/androidx) | 1.1.0-alpha06 | Apache-2.0 | Key handling |
-| [AndroidX WorkManager](https://developer.android.com/jetpack/androidx) | 2.10.0 | Apache-2.0 | On-device reminders |
+| [AndroidX WorkManager](https://developer.android.com/jetpack/androidx) | 2.10.0 | Apache-2.0 | Required by Glance widgets; legacy reminder cleanup |
 | [AndroidX Glance AppWidget](https://developer.android.com/jetpack/androidx/releases/glance) | 1.2.0-rc01 | Apache-2.0 | Home-screen widgets |
 | [Jetpack Compose BOM](https://developer.android.com/jetpack/compose) | 2024.12.01 | Apache-2.0 | UI toolkit |
 | [Material 3 for Compose](https://developer.android.com/jetpack/androidx/releases/compose-material3) | via BOM | Apache-2.0 | UI components |
@@ -50,10 +50,12 @@ Dependency versions match `gradle/libs.versions.toml` at release time.
 
 ## Transitive permissions
 
-WorkManager may merge standard Android permissions such as
-`RECEIVE_BOOT_COMPLETED`, `WAKE_LOCK`, and `ACCESS_NETWORK_STATE` so scheduled
-check-in reminders can resume after reboot. FeelS does not declare `INTERNET`
-and does not transmit check-in data off the device.
+WorkManager (a Glance dependency) merges standard Android permissions such as
+`WAKE_LOCK` and `FOREGROUND_SERVICE`. Since 1.0.3 FeelS removes the merged
+`ACCESS_NETWORK_STATE` permission because it never schedules network-dependent
+work. Reminders use AlarmManager and reschedule after reboot via
+`RECEIVE_BOOT_COMPLETED`. FeelS does not declare `INTERNET` and does not
+transmit check-in data off the device.
 
 ## License texts
 

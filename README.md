@@ -8,7 +8,7 @@ log check-ins, and review patterns over time.
 | | |
 |---|---|
 | **Package** | `com.z3itt.feels` |
-| **Version** | `1.0.2` |
+| **Version** | `1.0.3` |
 | **Min SDK** | 26 (Android 8.0) |
 | **Target SDK** | 35 |
 | **License** | [GPL-3.0-or-later](LICENSE) |
@@ -75,7 +75,7 @@ flowchart TB
         Canvas[Emotion Wheel Canvas]
         VM[ViewModels]
         Widget[Glance Widgets]
-        Notif[WorkManager Reminders]
+        Notif[AlarmManager Reminders]
     end
 
     subgraph domain [":core:domain"]
@@ -109,7 +109,7 @@ flowchart TB
 | DI | Dagger Hilt (`@HiltViewModel`, `@Singleton` repositories) |
 | Persistence | Room entities + SQLCipher passphrase from Android Keystore |
 | Preferences | DataStore (theme, disclaimer, reminder times) |
-| Background work | WorkManager one-shot chain for daily reminders |
+| Background work | AlarmManager + boot receiver for daily reminders |
 | Widgets | Glance AppWidget + shared data loaders |
 | Backup | kotlinx.serialization JSON, versioned format |
 
@@ -124,7 +124,7 @@ flowchart TB
 | Async | Kotlin Coroutines, Flow |
 | Storage | DataStore Preferences, Android Security Crypto |
 | Widgets | Glance 1.2 |
-| Background | WorkManager, Hilt Work |
+| Background | AlarmManager; WorkManager + Hilt Work (required by Glance) |
 | Build | AGP 8.7, KSP, R8 minify on release |
 
 Full dependency versions: [`gradle/libs.versions.toml`](gradle/libs.versions.toml).
@@ -138,10 +138,13 @@ in an encrypted database.
 |------------|-----|
 | `POST_NOTIFICATIONS` | Optional daily check-in reminders |
 | `VIBRATE` | Light haptic feedback on the wheel |
+| `SCHEDULE_EXACT_ALARM` | Reminders at the time you pick |
+| `RECEIVE_BOOT_COMPLETED` | Reschedule reminders after a reboot |
 
-WorkManager may merge `RECEIVE_BOOT_COMPLETED`, `WAKE_LOCK`, and
-`ACCESS_NETWORK_STATE` from its library manifest so reminders survive reboots.
-FeelS does not upload data over the network.
+Glance widgets depend on WorkManager, which also merges `WAKE_LOCK` and
+`FOREGROUND_SERVICE` from its library manifest. Since 1.0.3 the merged
+`ACCESS_NETWORK_STATE` permission is removed, because FeelS never schedules
+network-dependent work. FeelS does not upload data over the network.
 
 ## Getting started
 
@@ -154,8 +157,9 @@ FeelS does not upload data over the network.
 
 ### Install (release)
 
-Download **v1.0.2** from
-[GitHub Releases](https://github.com/z3itt/FeelS/releases/tag/v1.0.2).
+Install from [F-Droid](https://f-droid.org/packages/com.z3itt.feels/), or
+download **v1.0.3** from
+[GitHub Releases](https://github.com/z3itt/FeelS/releases/tag/v1.0.3).
 
 Signed release builds for F-Droid reproducibility use `./gradlew assembleRelease -Pfdroid=true`
 (see [CONTRIBUTING.md](CONTRIBUTING.md)).

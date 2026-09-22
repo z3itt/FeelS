@@ -1,0 +1,1 @@
+Removed the ACCESS_NETWORK_STATE ("view network connections") permission that a bundled library added. FeelS still has no internet access and keeps all data on your device.
